@@ -16,7 +16,8 @@ const moment = require('moment');
 
 
 const login = async (req, res) => {
-    const data = await userModel.findOne({ email: req.body.email })
+    const email = req.body.email;
+    const data = await userModel.findOne({ email })
     if (!data) {
         res.status(404)
         res.json({ status: 404, message: "User not found, Please check credentials and try again!" })
@@ -105,6 +106,7 @@ const createuser = async (req, res) => {
 const edituser = async (req, res) => {
     try {
         const userData = req.user
+        console.log(userData);
         const user_id = userData.user.user_id
         req.body.image = req.file.filename
         //const salt = await bcrypt.genSalt(10)
