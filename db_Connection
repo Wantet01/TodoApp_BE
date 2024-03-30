@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express =require("express")
 
 //const uri="mongodb://localhost:27017/TodosDB"
-const uri = mongodb+srv://210305126035:Shu@12345@cluster0.sdk4jtv.mongodb.net/todo?retryWrites=true&w=majority&appName=Cluster0
+const uri = "mongodb+srv://210305126035:UfT8Y5AMUaBYphZr@cluster0.sdk4jtv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 mongoose.connect(uri, {
    useNewUrlParser: true,
    useUnifiedTopology: true
